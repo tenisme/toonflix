@@ -112,6 +112,7 @@ class App extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 15),
+                // currency_card.dart에서 만든 CurrencyCard 위젯 사용
                 const CurrencyCard(
                   name: "Euro",
                   amount: "6 428",
