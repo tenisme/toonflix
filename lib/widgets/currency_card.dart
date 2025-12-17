@@ -4,10 +4,14 @@ class CurrencyCard extends StatelessWidget {
   final String name, amount, code;
   final IconData icon;
   final int index;
+  // 짝수인지 홀수인지에 따라 카드 색상을 바꾸기 위한 getter
+  bool get isInverted => index.isOdd;
 
   // ignore: unused_field
   final Color _blackColor = const Color(0xFF1F2123);
 
+  // Flutter에서는 위젯의 성능 최적화를 위해 가능하면 const를 유지하는 것을 권장한다.
+  // 여기서 : isInverted = index.isOdd;를 사용하면 const 생성자를 사용할 수 없게 되므로, isInverted를 getter로 바꿔서 해결했다.
   const CurrencyCard({
     super.key,
     required this.name,
@@ -19,8 +23,6 @@ class CurrencyCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final bool isInverted = index.isOdd;
-
     return Transform.translate(
       offset: Offset(0, index * -20),
       child: Container(
