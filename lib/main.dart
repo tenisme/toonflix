@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:toonflix/widgets/button.dart';
-import 'package:toonflix/widgets/currency_card.dart';
+import 'package:prac_stateless_widget/widgets/button.dart';
+import 'package:prac_stateless_widget/widgets/currency_card.dart';
 
 void main() {
   // 아래의 App() 위젯이 어플을 시작할 때 뜨는 첫 번째 위젯이다.
